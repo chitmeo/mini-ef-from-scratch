@@ -55,3 +55,24 @@ mini-ef-from-scratch
     └── workflows/
 ```
 
+# The final API should look like this
+
+var sql = db.Users
+    .Where(x => x.Age > 18)
+    .Where(x => x.Name.StartsWith("A"))
+    .OrderBy(x => x.Name)
+    .Select(x => new
+    {
+        x.Id,
+        x.Name
+    })
+    .ToSql();
+
+Expected output:
+
+SELECT Id, Name
+FROM Users
+WHERE Age > 18
+AND Name LIKE 'A%'
+ORDER BY Name
+
