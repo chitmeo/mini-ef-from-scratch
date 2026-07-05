@@ -56,7 +56,7 @@ mini-ef-from-scratch
 ```
 
 # The final API should look like this
-
+```csharp
 var sql = db.Users
     .Where(x => x.Age > 18)
     .Where(x => x.Name.StartsWith("A"))
@@ -67,12 +67,48 @@ var sql = db.Users
         x.Name
     })
     .ToSql();
-
+```
 Expected output:
-
+```sql
 SELECT Id, Name
 FROM Users
 WHERE Age > 18
 AND Name LIKE 'A%'
 ORDER BY Name
+```
+# Definition of Done (for Every Issue)
 
+Every issue must satisfy the following checklist.
+
+## Objective
+
+Describe exactly one concept to learn.
+
+## Prerequisites
+
+List the required knowledge.
+
+## Input
+
+Provide the input code or data.
+
+## Expected Output
+
+Provide the exact expected result.
+
+## Requirements
+Use only the .NET Base Class Library (BCL)
+Do not use third-party libraries
+Keep the implementation clean and readable
+Write meaningful comments where appropriate
+## Checklist
+- [ ] Implementation completed
+- [ ] Unit tests added
+- [ ] Console demo added
+- [ ] Documentation updated
+- [ ] Code reviewed
+- [ ] All tests pass
+
+## Bonus Challenge
+
+Optional advanced exercise for deeper understanding.
