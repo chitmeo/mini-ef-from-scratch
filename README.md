@@ -37,19 +37,18 @@ mini-ef-from-scratch
 ├── README.md
 │
 ├── docs/
-│   ├── 00-roadmap.md
 │   ├── 01-expression-trees.md
 │   ├── 02-query-provider.md
 │   ├── 03-expression-visitor.md
 │   ├── ...
 │
 ├── src/
-│   ├── MiniEf.Core/
-│   ├── MiniEf.Sql/
-│   ├── MiniEf.Console/
+│   ├── ChitMeo.MiniEf.Core/
+│   ├── ChitMeo.MiniEf.Sql/
+│   ├── ChitMeo.MiniEf.Console/
 │
 ├── tests/
-│   └── MiniEf.Tests/
+│   └── ChitMeo.MiniEf.Tests/
 │
 └── .github/
     ├── ISSUE_TEMPLATE/
